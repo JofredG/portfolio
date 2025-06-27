@@ -1,152 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset = "UTF-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- online dependency -->
-    <link rel="stylesheet" href="style.css">
-    <title>Jofred - Portfolio</title>
-</head>
-<body>
-  <!-- Header Section -->
+<html>
+  <head>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --main-color: #7d6ff6;
+      }
+      
+      body { background-color: black;
+             color: #ce6ff6;
+             color: #CCCCCC;
+             padding: 1em;
+             font-family: "Space Grotesk", sans-serif;
+             font-size: 1.2em; }
+      a    { color: #b366f6; }
+      h1   { color: #7d6ff6; }
+      h2   { color: #7d6ff6; }
+      h3   { color: #7d6ff6; }
+      h4   { color: #7d6ff6; }
+      h5   { color: #7d6ff6; }
+      ol   { padding-left: 1em; }
+      ul   { padding-left: 1em; }
+      li   { list-style-type: none; }
+      .smoller { font-size: smaller; }
+      .space-grotesk {
+             font-family: "Space Grotesk", sans-serif;
+             font-optical-sizing: auto;
+             font-weight: 400;
+             font-style: normal;
+      }
+      .home-image img{
+        width:25vw;
+        border: 3px solid var(--main-color);
+        border-radius: 51% 49% 48% 52% / 49% 49% 51% 51%;
+        animation: borderAnimation 5s linear infinite;
+      }
 
-  <header>
+      @keyframes borderAnimation {
+        0% {
+          border-radius: 51% 49% 48% 52% / 49% 49% 51% 51%;
+        }
+        35% {
+          border-radius: 51% 49% 57% 43% / 40% 54% 46% 60%;
+        }
+        65% {
+          border-radius: 67% 33% 68% 32% / 27% 70% 30% 73%;
+        }
+        100% {
+          border-radius: 51% 49% 48% 52% / 49% 49% 51% 51%;
+        }
+      }
 
-    <a href="#home" class="logo">Jofred Gonzalez</a>
+      
+      .resume-link:hover::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 500px;
+          height: 500px;
+          background: url('assets/puppyEyes.gif') no-repeat center center;
+          background-size: contain; /* Ensures the GIF fits within the link area */
+          transform: translate(-50%, -50%);
+      }
 
-    <div class='bx bx-menu-alt-left' id="menu-icon"></div>
 
-    <ul class="navbar">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="./explore.html">Explore</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#contact">TOSWATSYDKWTP</a></li> <!--That one spot with all the stuff you don't know where to put-->
+      #pnich { position: absolute;
+             font-size: .75em;
+             left: 1em;
+             bottom: 0em;
+             color: grey; }
+      #wl  { position: absolute;
+             font-size: .75em;
+             left: 1em;
+             bottom: 1.25em;
+             color: grey; }
+      #about { max-width: 400px; }
+      #b2n { position: absolute;
+             right: 1em;
+             bottom: 1rem; }
+      #avatar-img { width: 3rem;
+	            position: absolute;
+		        display: block;
+		        right: 1rem;
+                bottom: 1rem; }
+      
+    </style>
+  </head>
+  <body>
+    <h2>Jofred Gonzalez</h2>
+    <h3>4th yr CS undegrad @ U Texas Rio Grande Valley</h3>
+    <h3>Links and more!</h3>
+    
+    <ul>
+      <li><a href="https://www.linkedin.com/in/jofredg/">LinkedIn</a></li>
+      <li><a href="https://github.com/JofredG/">Github</a></li>
+      <li><a class="resume-link" href="assets/jofredg-resume.pdf" download class="resume-link">Resume (PDF)</a></li>
     </ul>
-
-    <div class="top-btn">
-      <a href="#contact" class="nav-btn">Contact Me</a>
+    <div class="home-image">
+        <img src="assets/pnich.png" alt="jof">
     </div>
-  </header>
-
-
-  <!-- Home Section Code -->
-
-  <section class="home" id="home"> <div class="home-content">
-      <h3>Hi,</h3>
-      <h1>My name is Jofred</h1>
-      <h3>I'm a <span class="multiple-text"></span></h3>
-
-      <p>I enjoy working on project in a variety of technological disciplines Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas consequatur est neque, vel, laboriosam accusantium, eveniet repellendus maxime cupiditate fugiat ut? In aliquam cum maiores.</p>
-      <p>Need a tip/resource? Take a tip/resource. Have a tip/resource? Leave a tip/resource.</p>
-      <p>*insert resource list and forum*</p>
-
-      <div class="social-media">
-        <a href="https://www.linkedin.com/in/jofredg"><i class='bx bxl-linkedin' ></i></a>
-        <a href="https://github.com/JofredG"><i class='bx bxl-github' ></i></a>
-      </div>
-
-      <a href="#" class="btn">Download CV</a>
-
+    <div id="about">
+      <h5>I'm currently working on socio-technical research involving the Python Packaging Index at CMU under Dr. Bogdan Vasilescu. I mostly code using Python, but I'm also interested in Rust and Java(Type)Script.</h5>
     </div>
-
-    <div class="home-img">
-      <img src="assets/image.jpg" alt="Profile Image">
+    <div id="avatar">
+      <img id="avatar-img" src="assets/work1.gif">
     </div>
-  </section>
-
-  <!-- About Section Code -->
-
-  <section class="about" id="about">
-    <div class="about-img">
-      <img src="assets/image.jpg" alt="">
-    </div>
-
-    <div class"about-content">
-        <h2 class="heading">About <span>Me</span></h2>
-        <h3>I'm a <span>Web Developer</span></h3>
-        <p>Lorem Ipsum dolor ist amet consectetur adasdfasd asdfasdfas asdfasdf. Ratione laboriosam</p> 
-        <a href="#" class="btn">Read More</a>
-    </div>
-  </section>
-
-  <!-- Portfolio Section Code -->
-
-  <section class="portfolio" id="portfolio">
-
-    <h2 class="heading">My <span>portfolio</span></h2>
-
-    <div class="portfolio-content">
-      <div class="row">
-        <img src="assets/1.png" alt="">
-        <div class="main-row">
-          <div class="row-text">
-            <h5>Telemetry Acquisition Desktop App</h5>
-          </div>
-          <div class="row-icon">
-            <i class="bx bxl-github"></i>
-          </div>
-        </div>
-        <h4>Website Development</h4>
-      </div>      
-
-      <div class="row">
-        <img src"assets/2.jpg" alt="">
-        <div class="main-row">
-          <div class="row-text">
-            <h5> Website Design</h5>
-          </div>
-          <div class="row-icon">
-            <i class="bx bxl-github"></i>
-          </div>
-        </div>
-        <h4>Website Development</h4>
-      </div>      
-    </div>
-
-  </section>
-
-  <!-- Contact Section Code -->
-
-  <section class="contact" id="contact">
-
-    <h2 class="heading">Contact <span>Me</span></h2>
-
-    <form action="#">
-      <div class="input-box">
-        <input type="text" placeholder="James Bond">
-        <input type="email" placeholder="BondJamesBond@aol.com">
-      </div>
-      <div class="input-box">
-        <input type="number" placeholder="Phone Number">
-        <input type="text" placeholder="Email Subject">
-      </div>
-
-      <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-
-      <input type="submit" value="Send Message" class="btn">
-    </form>
-
-  </section>
-
-  <!-- Footer Section Code -->
-
-  <footer class="footer">
-    <div class="social">
-      <a href="#"><i class='bx bxl-linkedin'></i></a>
-      <a href="#"><i class='bx bxl-github'></i></a>
-    </div>
-
-    <p class="copyright">
-      &copy; Jofred Gonzalez | All Rights Reserved
-    </p>
-
-  </footer>
-
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script src="./script.js"></script>
-
-</body>
-
+    <p id="pnich">I acknowledge my friend couldn't frame the photo properly.</p>
+  </body>
 </html>
